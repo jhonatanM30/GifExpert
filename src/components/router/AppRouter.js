@@ -4,21 +4,19 @@ import {
     Switch,
     Route
 } from "react-router-dom";
-import { NavBar } from '../nav/NavBar';
+
 import { Login } from '../login/Login';
-import { GifExpert } from '../gif/GifExpert';
-import { About } from '../About/About'
+import { DashBoardRouter } from './DashBoardRouter';
+
+
 
 export const AppRouter = () => {
     return (
         <Router>
-            <Fragment>
-                <NavBar />
+            <Fragment>            
                 <Switch >
-                    <Route exact path="/" component={Login}></Route>
-                    <Route exact path="/gif" component={GifExpert}></Route>
-                    <Route exact path="/about" component={About}></Route>
-                    <Route  component={GifExpert}></Route>
+                    <Route exact path="/login" component={Login}></Route>  
+                    <Route  path="/" component={DashBoardRouter}></Route>                 
                 </Switch>
             </Fragment>
         </Router>
