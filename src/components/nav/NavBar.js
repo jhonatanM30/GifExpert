@@ -14,9 +14,12 @@ export const NavBar = () => {
                     <NavLink exact activeClassName="active" to="/gif" className="nav-link">
                         Gif
                     </NavLink>
-                    <NavLink exact activeClassName="active" to="/heroes" className="nav-link">
-                        Heroes
-                    </NavLink>
+                    <NavLink exact activeClassName="active" to="/dc" className="nav-link">
+                        Heroes Dc
+                    </NavLink>  
+                    <NavLink exact activeClassName="active" to="/marvel" className="nav-link">
+                        Heroes Marvel
+                    </NavLink>                   
                 </div>
             </div>
         </nav>

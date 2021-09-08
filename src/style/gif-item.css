@@ -1,3 +1,10 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+
 .title-main{
     text-align: center;
     margin-top: 1rem;

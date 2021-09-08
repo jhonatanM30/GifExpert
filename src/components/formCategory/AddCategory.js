@@ -26,18 +26,18 @@ export const AddCategory = ({ setcategory }) => {
     return (
         <div className="container">
             <form className="row justify-content-center" onSubmit={handleClickButton}>
-                <div class="col-auto"> <label for="nameCategory" >Nombre de la categoria : </label> </div>
-                <div class="col-auto">
+                <div className="col-auto"> <label htmlFor="nameCategory" >Nombre de la categoria : </label> </div>
+                <div className="col-auto">
                     <input
                         type="text"
-                        class="form-control"
+                        className="form-control"
                         name="nameCategory"
                         autoComplete="on"
                         value={nameCategory}
                         onChange={handleInputChange}
                     />
                 </div>
-                <div class="col-auto">
+                <div className="col-auto">
                     <button type="submit" className="btn btn-primary">Enviar</button>
                 </div>
             </form>
