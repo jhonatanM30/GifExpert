@@ -4,18 +4,17 @@ import { GifGridItem } from "./GifGridItem";
 
 export const GifGrid = ({ category }) => {
 
-    const { loading, data: imgs } = useFetchGifs(category);
-
+    const { loading, data: gifs } = useFetchGifs(category);
     return (
             <div className="container">
                 <div className="title-main">
                     <h2>{category} </h2>
                 </div>
-                <div className="row">
+                <div className="row justify-content-center p-2">
                     {
                         loading ? <p className="row animate__flash"> Cargando... </p>
-                            : imgs.map((img) => (
-                                <GifGridItem key={img.id} img={img} />
+                            : gifs.map((gif) => (
+                                <GifGridItem key={gif.id} gif={gif} />
                             ))
                     }
                 </div>

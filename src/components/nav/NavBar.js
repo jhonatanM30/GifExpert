@@ -19,7 +19,10 @@ export const NavBar = () => {
                     </NavLink>  
                     <NavLink exact activeClassName="active" to="/marvel" className="nav-link">
                         Heroes Marvel
-                    </NavLink>                   
+                    </NavLink> 
+                    <NavLink exact activeClassName="active" to="/searchgeneral" className="nav-link">
+                        Buscador General
+                    </NavLink>                        
                 </div>
             </div>
         </nav>

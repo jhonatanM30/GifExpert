@@ -1,16 +1,16 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { Redirect, useParams } from 'react-router'
 import { getHeroesById } from '../../selectors/getHeroesById'
 
-export const Heroes = ({history}) => {
+export const Heroes = ({ history }) => {
 
     const { heroeId } = useParams();
 
-    const hero = getHeroesById(heroeId);
+    const hero = useMemo(() => getHeroesById(heroeId), [heroeId])
 
-    const handleReturn = () =>{
-        history.length <= 2 ? history.push('/login') 
-        : history.goBack()
+    const handleReturn = () => {
+        history.length <= 2 ? history.push('/login')
+            : history.goBack()
     }
 
     return (
@@ -18,7 +18,7 @@ export const Heroes = ({history}) => {
             :
             <div className='row m-5 p-3 my-card'>
                 <div className="col-4">
-                    <img src={`../assets/heroes/${heroeId}.jpg`} className="card-img" alt={hero.superhero} />
+                    <img src={`../assets/heroes/${heroeId}.jpg`} className="card-img animate__animated animate__fadeInDown" alt={hero.superhero} />
                 </div>
                 <div className="col-8">
                     <h2>{hero.superhero}</h2>

@@ -3,6 +3,7 @@ import "../../style/login.css";
 import { UserContext } from "../context/UserContext";
 
 export const Login = ({history}) => {
+
   const { setUser } = useContext(UserContext);
   const [nameUser, setNameUser] = useState("");
 
@@ -14,7 +15,6 @@ export const Login = ({history}) => {
     e.preventDefault();
     if (nameUser.trim() !== "") {
       setUser(nameUser);
-      setNameUser("");
       history.replace('/gif')
     } else {
       alert("Ingrese un usuario valido");
