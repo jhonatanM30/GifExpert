@@ -1,30 +1,49 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import '../../style/nav.css'
 export const NavBar = () => {
+
+    const activeMenuMovil = (e) => {
+        const navMenu = document.querySelector(".nav-menu");
+        navMenu.classList.toggle("nav-menu_visible");
+    };
+
     return (
-        <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
+        <nav className="nav">
             <NavLink exact activeClassName="active" to="/gif" className="navbar-brand">
-                UseContext
-            </NavLink>
-            <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div className="navbar-nav">
-                    <NavLink exact activeClassName="active" to="/login" className="nav-link">
-                        Logout
-                    </NavLink>
-                    <NavLink exact activeClassName="active" to="/gif" className="nav-link">
+                Commics 
+            </NavLink> 
+            <span>Jhonatan</span>           
+            <button className="nav-toogle" onClick={activeMenuMovil}>
+                <i className="fas fa-bars"></i>
+            </button>
+            <ul className="nav-menu">
+                <li className="nav-menu-item">
+                    <NavLink exact activeClassName="active" to="/searchgif" className="nav-link">
                         Gif
                     </NavLink>
+                </li>
+                <li className="nav-menu-item">
                     <NavLink exact activeClassName="active" to="/dc" className="nav-link">
                         Heroes Dc
-                    </NavLink>  
+                    </NavLink>
+                </li>
+                <li className="nav-menu-item">
                     <NavLink exact activeClassName="active" to="/marvel" className="nav-link">
                         Heroes Marvel
-                    </NavLink> 
+                    </NavLink>
+                </li>
+                <li className="nav-menu-item">
                     <NavLink exact activeClassName="active" to="/searchgeneral" className="nav-link">
                         Buscador General
-                    </NavLink>                        
-                </div>
-            </div>
+                    </NavLink>
+                </li>
+                <li className="nav-menu-item">
+                    <NavLink exact activeClassName="active" to="/login" className="nav-link">
+                     Logout 
+                    </NavLink>                    
+                </li>
+            </ul>
         </nav>
     );
 };

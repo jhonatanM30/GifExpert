@@ -1,19 +1,20 @@
-import React, { useState } from 'react';
+import React, { useReducer } from 'react';
 import { AppRouter } from './router/AppRouter';
-import { UserContext } from './context/UserContext';
+import { AuthContext } from './context/AuthContext';
+import { authReducer } from './auth/authReducer';
 
+const init = () => {
+  return JSON.parse(localStorage.getItem('user')) || { logged : false};
+}
 
 export const PrimeraApp = () => {
 
-  const [user, setUser] = useState({})
+  const [user, dispatch] = useReducer(authReducer, {}, init)
 
   return (
-    <UserContext.Provider value={{
-      user,
-      setUser
-    }}>
+    <AuthContext.Provider value={{user, dispatch}}>
       <AppRouter ></AppRouter>
-    </UserContext.Provider>
+    </AuthContext.Provider>
   );
 
 };

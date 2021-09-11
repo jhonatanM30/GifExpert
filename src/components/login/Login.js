@@ -1,24 +1,28 @@
 import React, { useState, useContext, Fragment } from "react";
 import "../../style/login.css";
-import { UserContext } from "../context/UserContext";
+import { types } from "../../types/types";
+import { AuthContext } from "../context/AuthContext";
+
 
 export const Login = ({history}) => {
 
-  const { setUser } = useContext(UserContext);
+  
   const [nameUser, setNameUser] = useState("");
 
   const handleInputChange = ({ target }) => {
     setNameUser(target.value);
   };
 
-  const handleClickButton = (e) => {
-    e.preventDefault();
-    if (nameUser.trim() !== "") {
-      setUser(nameUser);
-      history.replace('/gif')
-    } else {
-      alert("Ingrese un usuario valido");
-    }
+const {dispatch} = useContext(AuthContext);
+
+  const handleClickButton = () => {
+    dispatch({ 
+      type: types.login,
+      payload:{
+        name: 'Jhonatan'
+      }
+    
+    })
   };
 
   return (

@@ -16,7 +16,7 @@ export const Heroes = ({ history }) => {
     return (
         !hero ? <Redirect to='/login' />
             :
-            <div className='row m-5 p-3 my-card'>
+            <div className='row m-5 p-3 my-card animate__animated animate__fadeIn'>
                 <div className="col-4">
                     <img src={`../assets/heroes/${heroeId}.jpg`} className="card-img animate__animated animate__fadeInDown" alt={hero.superhero} />
                 </div>

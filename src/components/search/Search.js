@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react'
 import { useForm } from '../../hooks/useForm'
 import queryString from 'query-string';
-import { useLocation, Redirect } from 'react-router';
+import { useLocation } from 'react-router';
 import { getHeroesByName } from '../../selectors/getHeroesByName'
 import { useFetchGifs } from "../../hooks/useFetchGifs";
 import { HeroesCard } from '../heroes/HeroesCard';
@@ -29,8 +29,8 @@ export const Search = ({ history }) => {
   }
 
   return (
-    <div>
-      <h1>Buscador general</h1>
+    <div className="animate__animated animate__fadeIn">
+      <h1 className="animate__animated animate__fadeInDown">Buscador general</h1>
       <div className="row justify-content-center">
         <div className="col-12">
           <form className="row" onSubmit={handleClickButton}>
