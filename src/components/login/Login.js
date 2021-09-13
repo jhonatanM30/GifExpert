@@ -16,18 +16,23 @@ export const Login = ({history}) => {
 const {dispatch} = useContext(AuthContext);
 
   const handleClickButton = () => {
+
+    const lastPage = localStorage.getItem('lastPage')
+
     dispatch({ 
       type: types.login,
       payload:{
-        name: 'Jhonatan'
+        name: nameUser
       }
     
-    })
-  };
+    });
+
+    history.replace(lastPage);
+  }
 
   return (
     <Fragment>
-      <div className="container-fluid">
+      <div className="container-fluid  animate__animated animate__flipInX">
         <div className="row main-content bg-success text-center">
           <div className="col-md-4 text-center company__info">
             <span className="company__logo">
@@ -67,7 +72,7 @@ const {dispatch} = useContext(AuthContext);
                   <div className="row">
                     <input
                       type="submit"
-                      value="Ingresar"
+                      value="Iniciar Sesión"
                       className="btn btn-login"
                       onClick={handleClickButton}
                     />

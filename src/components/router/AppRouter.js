@@ -1,22 +1,25 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useContext } from 'react'
 import {
     BrowserRouter as Router,
-    Switch,
-    Route
+    Switch
 } from "react-router-dom";
 
+import { AuthContext } from '../context/AuthContext';
 import { Login } from '../login/Login';
 import { DashBoardRouter } from './DashBoardRouter';
-
-
+import { PrivateRoute } from './PrivateRoute';
+import { PublicRoute } from './PublicRoute';
 
 export const AppRouter = () => {
+
+    const { user } = useContext(AuthContext);
+
     return (
         <Router>
-            <Fragment>            
+            <Fragment>
                 <Switch >
-                    <Route exact path="/login" component={Login}></Route>  
-                    <Route  path="/" component={DashBoardRouter}></Route>                 
+                    <PublicRoute exact path="/login" component={Login} isAuthenticated={user.logged}/>
+                    <PrivateRoute path="/" component={DashBoardRouter} isAuthenticated={user.logged}/>                 
                 </Switch>
             </Fragment>
         </Router>
