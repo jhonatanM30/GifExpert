@@ -1,20 +1,20 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import { NavLink, useHistory } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import { types } from "../../types/types";
-import '../../style/nav.css'
+import '../../style/nav.css';
 
 export const NavBar = () => {
 
-     const {user: {name}, dispatch } = useContext(AuthContext);
+    const { user: { name }, dispatch } = useContext(AuthContext);
     const history = useHistory();
 
-     const handleLogout = () => {   
-        history.replace('/login')      
-        dispatch({ 
-            type: types.logout,                    
-          })
-     }
+    const handleLogout = () => {
+        history.replace('/login')
+        dispatch({
+            type: types.logout,
+        })
+    }
 
     const activeMenuMovil = (e) => {
         const navMenu = document.querySelector(".nav-menu");
@@ -24,9 +24,9 @@ export const NavBar = () => {
     return (
         <nav className="nav">
             <NavLink exact activeClassName="active" to="/gif" className="navbar-brand">
-                Commics 
-            </NavLink> 
-            <span>{name}</span>           
+                Commics
+            </NavLink>
+            <span>{name}</span>
             <button className="nav-toogle" onClick={activeMenuMovil}>
                 <i className="fas fa-bars"></i>
             </button>
@@ -52,9 +52,9 @@ export const NavBar = () => {
                     </NavLink>
                 </li>
                 <li className="nav-menu-item">
-                    <button  className="nav-link btn" onClick={handleLogout}>
-                     Logout 
-                    </button>                    
+                    <button className="nav-link btn" onClick={handleLogout}>
+                        Logout
+                    </button>
                 </li>
             </ul>
         </nav>
