@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import queryString from 'query-string';
 import { useFetchGifs } from "../../hooks/useFetchGifs";
 import { useLocation } from 'react-router';
