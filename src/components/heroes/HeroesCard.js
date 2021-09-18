@@ -1,8 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { heroImages } from '../../helpers/heroImages';
 import '../../style/heroes.css'
-
-
 
 export const HeroesCard = ({ hero }) => {
 
@@ -10,7 +9,7 @@ export const HeroesCard = ({ hero }) => {
         <div className="col-5 my-card ">
             <div className="row justify-content-start  p-3">
                 <div className="col-md-6">
-                    <img src={`./assets/heroes/${hero.id}.jpg`} className="card-img" alt={hero.superhero} />
+                    <img src={heroImages(`./${hero.id}.jpg`).default} className="card-img" alt={hero.superhero} />
                 </div>
                 <div className="col-md-6">
                     <div className="card-body card-heroes">
