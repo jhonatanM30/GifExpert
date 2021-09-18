@@ -40,12 +40,12 @@ const {dispatch} = useContext(AuthContext);
                 <span className="fa fa-android"></span>
               </h2>
             </span>
-            <h4 className="company_title">Mi Portafolio</h4>
+            <h4 className="company_title">Entretenimiento</h4>
           </div>
           <div className="col-md-8 col-xs-12 col-sm-12 login_form ">
             <div className="container-fluid">
               <div className="row row-login">
-                <h2>Log In</h2>
+                <h2>Bienvenido</h2>
               </div>
               <div className="row-form">
                 <form control="" className="form-group">
@@ -60,6 +60,7 @@ const {dispatch} = useContext(AuthContext);
                       placeholder="Username"
                     />
                   </div>
+                  {/*
                   <div className="row">
                     <input
                       type="password"
@@ -68,7 +69,7 @@ const {dispatch} = useContext(AuthContext);
                       className="form__input"
                       placeholder="Password"
                     />
-                  </div>
+                  </div> */}
                   <div className="row">
                     <input
                       type="submit"
@@ -79,11 +80,12 @@ const {dispatch} = useContext(AuthContext);
                   </div>
                 </form>
               </div>
+              {/*
               <div className="row">
                 <p>
                   Don't have an account? <a href="#">Register Here</a>
                 </p>
-              </div>
+              </div>*/}
             </div>
           </div>
         </div>
