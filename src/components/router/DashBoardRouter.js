@@ -28,7 +28,7 @@ export const DashBoardRouter = () => {
                     <Route exact path="/heroe/:heroeId" component={Heroes}></Route>
                     <Route exact path="/login" component={Login}></Route> 
                     <Route exact path="/searchgeneral" component={Search}></Route>
-                    <Redirect to="/login" />
+                    <Redirect to="/searchgif" />
                 </Switch>
             </div>
         </Fragment>
