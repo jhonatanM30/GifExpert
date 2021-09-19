@@ -24,9 +24,8 @@ export const NavBar = () => {
     return (
         <nav className="nav">
             <NavLink exact activeClassName="active" to="/gif" className="navbar-brand">
-              Commics
-            </NavLink>
-            <span>{name}</span>
+            <span>Hola {name}, Bienvenido</span>
+            </NavLink>            
             <button className="nav-toogle" onClick={activeMenuMovil}>
                 <i className="fas fa-bars"></i>
             </button>
@@ -51,12 +50,12 @@ export const NavBar = () => {
                         Buscador General
                     </NavLink>
                 </li>
-                <li className="nav-menu-item">
+                <li className="logout">
                     <button className="nav-link btn" onClick={handleLogout}>
-                        Logout
+                    <i className="fas fa-door-closed"></i> Cerrar Sesión
                     </button>
                 </li>
-            </ul>
+            </ul>             
         </nav>
     );
 };

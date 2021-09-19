@@ -27,17 +27,15 @@
   text-transform: uppercase; 
 }
 
+.logout{
+  padding-left: 3rem;
+}
+
 .nav-link{
     color: aliceblue;
 }
 
-.nav-toogle {
-  background-color: rgb(255, 255, 255);
-  border: none;
-  color: rgb(255, 166, 0);
-  font-size: 20px;
-  padding: 0 30px;
-  line-height: 60px;
+.nav-toogle {  
   display: none;
   cursor: pointer;  
 }
@@ -69,6 +67,13 @@
   .nav-toogle {
     height: 40px;    
     display: flex;
+    background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  border: none;
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  padding-top: 5px;
+  line-height: 60px;
   }
 
   .nav-menu_visible{
