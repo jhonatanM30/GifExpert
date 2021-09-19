@@ -6,12 +6,12 @@ import '../../style/heroes.css'
 export const HeroesCard = ({ hero }) => {
 
     return (
-        <div className="col-5 my-card ">
-            <div className="row justify-content-start  p-3">
-                <div className="col-md-6">
+        <div className="col-11 col-sm-12 col-lg-5 my-card ">
+            <div className="row justify-content-center p-3">
+                <div className="col-12 col-sm-6">
                     <img src={heroImages(`./${hero.id}.jpg`).default} className="card-img" alt={hero.superhero} />
                 </div>
-                <div className="col-md-6">
+                <div className="col-12 col-sm-6">
                     <div className="card-body card-heroes">
                         <h5 className="card-title"> {hero.superhero} </h5>
                         <p className="card-text text-ego">{hero.alter_ego}</p>

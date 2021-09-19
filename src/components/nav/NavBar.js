@@ -24,7 +24,7 @@ export const NavBar = () => {
     return (
         <nav className="nav">
             <NavLink exact activeClassName="active" to="/gif" className="navbar-brand">
-                Commics
+              Commics
             </NavLink>
             <span>{name}</span>
             <button className="nav-toogle" onClick={activeMenuMovil}>

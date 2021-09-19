@@ -28,25 +28,23 @@ export const SearchGif = ({ history }) => {
 
     return (
         <div className="animate__animated animate__fadeIn">
-             <h1 className="animate__animated animate__fadeInDown">Gif Expert</h1>
+            <h1 className="animate__animated animate__fadeInDown">Gif Expert</h1>
             <div className="row justify-content-center">
-                <div className="col-12">
-                    <form className="row" onSubmit={handleClickButton}>
-                        <div className="col-4">
-                            <input
-                                type="text"
-                                className="form-control"
-                                name="searchValues"
-                                placeholder="Buscar Gif..."                                
-                                value={searchValues}
-                                onChange={handleInputChange}
-                            />
-                        </div>
-                        <div className="col-5">
-                            <button type="submit" className="btn btn-primary">Buscar...</button>
-                        </div>
-                    </form>
-                </div>
+                <form className="row" onSubmit={handleClickButton}>
+                    <div className="col-7 col-sm-7 col-lg-5">
+                        <input
+                            type="text"
+                            className="form-control"
+                            name="searchValues"
+                            placeholder="Buscar Gif..."
+                            value={searchValues}
+                            onChange={handleInputChange}
+                        />
+                    </div>                    
+                    <div className="col-4 col-sm-4 col-lg-5">
+                        <button type="submit" className="btn btn-primary">Buscar...</button>
+                    </div>
+                </form>
             </div>
             <hr />
             <div className="row justify-content-center">
