@@ -4,8 +4,7 @@ html, body{
     font-family: Helvetica, Arial,  sans-serif;    
 }
 
-.my-card {   
-    margin-top: 1rem;
+.my-card {      
     box-shadow: 5px 5px 10px 1px #000;
     margin: 1rem;
    }
